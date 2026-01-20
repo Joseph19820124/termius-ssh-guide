@@ -24,14 +24,32 @@ export default function HomeZh() {
           </p>
         </section>
 
-        {/* What is Termius */}
+        {/* What is Termius - Enhanced */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold text-emerald-400 mb-4">什么是 Termius？</h3>
-          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 space-y-4">
             <p className="text-slate-300 leading-relaxed">
               Termius 是一款现代化的跨平台 SSH 客户端，支持 Windows、macOS、Linux、iOS 和 Android。
-              它提供简洁的界面来管理 SSH 连接，支持密钥认证，并具有 SFTP 文件传输、端口转发和跨设备同步等功能。
+              与仅限于桌面环境的传统工具不同，Termius 在所有设备上提供无缝的远程管理体验。
             </p>
+            <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-400 mb-2">支持的协议</h4>
+                <p className="text-slate-400 text-sm">SSH、SFTP、Mosh 和 Telnet</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-400 mb-2">安全性</h4>
+                <p className="text-slate-400 text-sm">AES-256 加密保险库、ECDSA、ed25519 密钥、FIDO2 支持</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-400 mb-2">生产力</h4>
+                <p className="text-slate-400 text-sm">多标签界面、分屏视图、自动补全建议</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-400 mb-2">云同步</h4>
+                <p className="text-slate-400 text-sm">在无限设备间同步连接和凭据</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -77,6 +95,12 @@ export default function HomeZh() {
                 </div>
               ))}
             </div>
+            <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 mt-4">
+              <p className="text-blue-300 text-sm">
+                <strong>免费版 vs 专业版：</strong>免费版包含基础 SSH 和主机管理功能。
+                专业版增加 SFTP、云同步、代码片段和端口转发功能。
+              </p>
+            </div>
           </div>
         </section>
 
@@ -103,6 +127,10 @@ export default function HomeZh() {
               <li className="flex gap-4">
                 <span className="text-emerald-400 font-mono">d.</span>
                 <span className="text-slate-300">设置端口（默认为 <code className="bg-slate-700 px-2 py-1 rounded text-emerald-400">22</code>）</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="text-emerald-400 font-mono">e.</span>
+                <span className="text-slate-300">可选：添加标签并分配到分组以便于管理</span>
               </li>
             </ol>
           </div>
@@ -136,6 +164,11 @@ export default function HomeZh() {
                 <li>5. 如果是新生成的密钥，将公钥复制到服务器的 <code className="bg-slate-700 px-2 py-1 rounded text-emerald-400">~/.ssh/authorized_keys</code> 文件中</li>
                 <li>6. 点击 <code className="bg-slate-700 px-2 py-1 rounded text-emerald-400">Save</code>（保存）</li>
               </ol>
+              <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 mt-4">
+                <p className="text-emerald-300 text-sm">
+                  <strong>提示：</strong>推荐使用 ed25519 密钥以获得更好的安全性。虽然密钥更短，但由于采用更复杂的算法，安全性与 4096 位 RSA 密钥相当。
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -180,26 +213,188 @@ export default function HomeZh() {
           </div>
         </section>
 
-        {/* Tips */}
+        {/* Advanced Features - NEW SECTION */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold text-emerald-400 mb-4">高级功能</h3>
+
+          {/* Port Forwarding */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4">端口转发</h4>
+            <p className="text-slate-300 mb-4">Termius 提供分步向导帮助你设置端口转发：</p>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h5 className="font-semibold text-cyan-400 mb-2">本地转发</h5>
+                <p className="text-slate-400 text-sm">在本地访问远程服务器的端口。例如：将 MySQL 的 3306 端口转发到本地。</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h5 className="font-semibold text-cyan-400 mb-2">远程转发</h5>
+                <p className="text-slate-400 text-sm">在远程机器上开放端口，转发到本地设备。</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h5 className="font-semibold text-cyan-400 mb-2">动态转发</h5>
+                <p className="text-slate-400 text-sm">创建 SOCKS 代理，通过一个隧道访问多个服务。</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Snippets */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4">代码片段</h4>
+            <p className="text-slate-300 mb-4">保存并复用命令序列，减少重复操作：</p>
+            <ul className="space-y-2 text-slate-300">
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>使用<strong>变量</strong>创建灵活的参数化代码片段</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>使用<strong>片段包</strong>进行分组管理</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>将代码片段绑定到主机，连接时自动执行</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>使用 <strong>AI 功能</strong>从描述生成 Shell 脚本</span>
+              </li>
+            </ul>
+            <div className="bg-slate-900 rounded-lg p-4 font-mono text-sm mt-4">
+              <p className="text-slate-400"># 带变量的代码片段示例</p>
+              <p className="text-slate-300">docker logs -f <span className="text-yellow-400">{"{{container_name}}"}</span></p>
+            </div>
+          </div>
+
+          {/* SFTP */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4">SFTP 文件传输</h4>
+            <p className="text-slate-300 mb-4">在本地和远程服务器之间传输文件：</p>
+            <ul className="space-y-2 text-slate-300">
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>拖放界面，轻松传输文件</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>同时运行两个 SFTP 连接</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>在两台远程主机之间直接传输文件</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Jump Hosts */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+            <h4 className="text-xl font-semibold text-white mb-4">跳板机（堡垒机）</h4>
+            <p className="text-slate-300 mb-4">
+              使用<strong>主机链</strong>功能通过中间服务器连接。
+              这与 <code className="bg-slate-700 px-2 py-1 rounded text-emerald-400">ssh -J</code> 或 ProxyJump 功能相同。
+            </p>
+          </div>
+        </section>
+
+        {/* SSH Security Best Practices - NEW SECTION */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold text-emerald-400 mb-4">SSH 安全最佳实践</h3>
+          <div className="space-y-4">
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <h4 className="font-semibold text-white mb-3">身份认证</h4>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>使用 SSH 密钥认证代替密码</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>优先使用 <strong>ed25519</strong> 密钥 - 更短但与 4096 位 RSA 同等安全</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>启用双因素认证（2FA），如 Google Authenticator 或 Duo</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>每 1-2 年轮换 SSH 密钥</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <h4 className="font-semibold text-white mb-3">访问控制</h4>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>禁用 root 登录 - 改用 sudo（<code className="bg-slate-700 px-1 rounded text-emerald-400">PermitRootLogin no</code>）</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>使用 <code className="bg-slate-700 px-1 rounded text-emerald-400">AllowUsers</code> 或 <code className="bg-slate-700 px-1 rounded text-emerald-400">AllowGroups</code> 限制 SSH 访问</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>通过防火墙限制特定 IP 地址访问</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>使用 <strong>fail2ban</strong> 阻止暴力破解尝试</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <h4 className="font-semibold text-white mb-3">连接安全</h4>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>修改默认端口 22 以减少自动化攻击</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>设置空闲超时以断开不活跃的会话</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>使用强加密算法：<code className="bg-slate-700 px-1 rounded text-emerald-400">aes256-gcm</code> 或 <code className="bg-slate-700 px-1 rounded text-emerald-400">chacha20-poly1305</code></span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>保持 SSH 软件更新以获取安全补丁</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Pro Tips - Enhanced */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold text-emerald-400 mb-4">实用技巧</h3>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               {
-                title: "使用分组",
-                desc: "将多个服务器整理成分组，便于管理"
+                title: "分组与标签",
+                desc: "按项目、环境（生产/开发）或区域组织服务器，快速访问"
               },
               {
-                title: "SFTP 支持",
-                desc: "使用内置的 SFTP 功能在本地和服务器之间传输文件"
+                title: "多标签与分屏",
+                desc: "使用标签和分屏视图同时处理多个会话"
               },
               {
-                title: "端口转发",
-                desc: "设置本地或远程端口转发，实现安全隧道"
+                title: "自动补全",
+                desc: "启用命令、参数和文件路径的自动补全以节省时间"
               },
               {
-                title: "代码片段",
-                desc: "将常用命令保存为代码片段，方便快速访问"
+                title: "团队共享",
+                desc: "通过保险库与团队共享主机、密钥、身份和代码片段"
+              },
+              {
+                title: "云集成",
+                desc: "与 AWS 和 DigitalOcean 集成，无缝管理云服务器"
+              },
+              {
+                title: "Mosh 支持",
+                desc: "在移动网络中使用 Mosh - 比 SSH 更好地处理间歇性连接"
               },
             ].map((tip) => (
               <div key={tip.title} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -210,26 +405,30 @@ export default function HomeZh() {
           </div>
         </section>
 
-        {/* Troubleshooting */}
+        {/* Troubleshooting - Enhanced */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold text-emerald-400 mb-4">常见问题排查</h3>
           <div className="space-y-4">
             {[
               {
                 problem: "连接被拒绝",
-                solution: "确保服务器上 SSH 服务正在运行（systemctl status sshd），并且防火墙已开放 22 端口"
+                solution: "确保 SSH 服务正在运行：systemctl status sshd。检查防火墙：ufw allow 22 或 firewall-cmd --add-service=ssh"
               },
               {
-                problem: "权限被拒绝",
-                solution: "检查用户名/密码是否正确，或确认 SSH 密钥已添加到 authorized_keys 文件"
+                problem: "权限被拒绝（publickey）",
+                solution: "检查密钥权限：chmod 600 ~/.ssh/id_ed25519 和 chmod 700 ~/.ssh。确认服务器上的 authorized_keys 文件。"
               },
               {
                 problem: "连接超时",
-                solution: "确认 IP 地址正确，且服务器可达（尝试 ping 测试）"
+                solution: "确认 IP/主机名正确。用 ping 检查服务器是否可达。确保没有网络防火墙阻止 22 端口。"
               },
               {
                 problem: "主机密钥验证失败",
-                solution: "服务器密钥已更改 - 确认这是预期的更改后，从 known_hosts 文件中删除旧密钥"
+                solution: "服务器密钥已更改（重装或 IP 复用）。删除旧密钥：ssh-keygen -R hostname，然后重新连接。"
+              },
+              {
+                problem: "认证失败次数过多",
+                solution: "SSH 代理加载了太多密钥。明确指定密钥或使用 ssh-add -D 清除代理。"
               },
             ].map((item) => (
               <div key={item.problem} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -245,8 +444,19 @@ export default function HomeZh() {
           <h3 className="text-2xl font-bold text-white mb-4">大功告成！</h3>
           <p className="text-slate-300 max-w-xl mx-auto">
             现在你可以使用 Termius 安全地连接到你的 Linux 服务器了。
-            探索应用的更多功能，如 SFTP、端口转发和代码片段，提升你的工作效率。
+            探索 SFTP、端口转发、代码片段和跳板机等高级功能，提升你的工作效率。
           </p>
+        </section>
+
+        {/* Sources */}
+        <section className="mt-12 pt-8 border-t border-slate-700">
+          <h4 className="text-lg font-semibold text-slate-400 mb-4">参考资料</h4>
+          <ul className="space-y-2 text-sm text-slate-500">
+            <li><a href="https://termius.com/documentation" className="hover:text-emerald-400 transition-colors">Termius 官方文档</a></li>
+            <li><a href="https://www.techrepublic.com/article/how-to-use-termius-ssh/" className="hover:text-emerald-400 transition-colors">TechRepublic - 如何使用 Termius</a></li>
+            <li><a href="https://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html" className="hover:text-emerald-400 transition-colors">nixCraft - OpenSSH 服务器最佳实践</a></li>
+            <li><a href="https://www.brandonchecketts.com/archives/ssh-ed25519-key-best-practices-for-2025" className="hover:text-emerald-400 transition-colors">SSH 密钥最佳实践 2025</a></li>
+          </ul>
         </section>
       </main>
 

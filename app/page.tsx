@@ -24,15 +24,32 @@ export default function Home() {
           </p>
         </section>
 
-        {/* What is Termius */}
+        {/* What is Termius - Enhanced */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold text-emerald-400 mb-4">What is Termius?</h3>
-          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 space-y-4">
             <p className="text-slate-300 leading-relaxed">
               Termius is a modern, cross-platform SSH client that works on Windows, macOS, Linux, iOS, and Android.
-              It provides a clean interface for managing SSH connections, supports key-based authentication,
-              and offers features like SFTP file transfer, port forwarding, and connection syncing across devices.
+              Unlike legacy tools limited to desktop environments, Termius provides a seamless remote management experience across all your devices.
             </p>
+            <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-400 mb-2">Protocols Supported</h4>
+                <p className="text-slate-400 text-sm">SSH, SFTP, Mosh, and Telnet</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-400 mb-2">Security</h4>
+                <p className="text-slate-400 text-sm">AES-256 encrypted vault, ECDSA, ed25519 keys, FIDO2 support</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-400 mb-2">Productivity</h4>
+                <p className="text-slate-400 text-sm">Multi-tab interface, split-view, autocomplete suggestions</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-400 mb-2">Cloud Sync</h4>
+                <p className="text-slate-400 text-sm">Sync connections and credentials across unlimited devices</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -78,6 +95,12 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 mt-4">
+              <p className="text-blue-300 text-sm">
+                <strong>Free vs Pro:</strong> The free plan includes basic SSH and host management.
+                Pro adds SFTP, cloud sync, snippets, and port forwarding features.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -104,6 +127,10 @@ export default function Home() {
               <li className="flex gap-4">
                 <span className="text-emerald-400 font-mono">d.</span>
                 <span className="text-slate-300">Set the port (default is <code className="bg-slate-700 px-2 py-1 rounded text-emerald-400">22</code>)</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="text-emerald-400 font-mono">e.</span>
+                <span className="text-slate-300">Optionally add tags and assign to a group for organization</span>
               </li>
             </ol>
           </div>
@@ -137,6 +164,11 @@ export default function Home() {
                 <li>5. If generating new keys, copy the public key to your server&apos;s <code className="bg-slate-700 px-2 py-1 rounded text-emerald-400">~/.ssh/authorized_keys</code></li>
                 <li>6. Click <code className="bg-slate-700 px-2 py-1 rounded text-emerald-400">Save</code></li>
               </ol>
+              <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 mt-4">
+                <p className="text-emerald-300 text-sm">
+                  <strong>Tip:</strong> Use ed25519 keys for better security. They&apos;re shorter but as secure as 4096-bit RSA keys due to a more complex algorithm.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -181,26 +213,188 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Tips */}
+        {/* Advanced Features - NEW SECTION */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold text-emerald-400 mb-4">Advanced Features</h3>
+
+          {/* Port Forwarding */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4">Port Forwarding</h4>
+            <p className="text-slate-300 mb-4">Termius provides a step-by-step wizard to set up port forwarding:</p>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h5 className="font-semibold text-cyan-400 mb-2">Local Forwarding</h5>
+                <p className="text-slate-400 text-sm">Access a remote server&apos;s port locally. Example: Forward MySQL port 3306 to your machine.</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h5 className="font-semibold text-cyan-400 mb-2">Remote Forwarding</h5>
+                <p className="text-slate-400 text-sm">Open a port on remote machine to forward to your local device.</p>
+              </div>
+              <div className="bg-slate-700/30 rounded-lg p-4">
+                <h5 className="font-semibold text-cyan-400 mb-2">Dynamic Forwarding</h5>
+                <p className="text-slate-400 text-sm">Create a SOCKS proxy to access multiple services through one tunnel.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Snippets */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4">Snippets</h4>
+            <p className="text-slate-300 mb-4">Save and reuse command sequences to reduce repetitive tasks:</p>
+            <ul className="space-y-2 text-slate-300">
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>Create snippets with <strong>variables</strong> for flexible parameters</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>Organize into <strong>Snippet Packages</strong> for better management</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>Auto-run snippets on connection by attaching to hosts</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>Use <strong>AI-powered</strong> shell script generation from descriptions</span>
+              </li>
+            </ul>
+            <div className="bg-slate-900 rounded-lg p-4 font-mono text-sm mt-4">
+              <p className="text-slate-400"># Example snippet with variable</p>
+              <p className="text-slate-300">docker logs -f <span className="text-yellow-400">{"{{container_name}}"}</span></p>
+            </div>
+          </div>
+
+          {/* SFTP */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4">SFTP File Transfer</h4>
+            <p className="text-slate-300 mb-4">Transfer files between your local machine and remote servers:</p>
+            <ul className="space-y-2 text-slate-300">
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>Drag-and-drop interface for easy file transfers</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>Run two SFTP connections simultaneously</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-emerald-400">•</span>
+                <span>Transfer files directly between two remote hosts</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Jump Hosts */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+            <h4 className="text-xl font-semibold text-white mb-4">Jump Hosts (Bastion)</h4>
+            <p className="text-slate-300 mb-4">
+              Connect through intermediate servers using the <strong>Host Chain</strong> feature.
+              This provides the same functionality as <code className="bg-slate-700 px-2 py-1 rounded text-emerald-400">ssh -J</code> or ProxyJump.
+            </p>
+          </div>
+        </section>
+
+        {/* SSH Security Best Practices - NEW SECTION */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold text-emerald-400 mb-4">SSH Security Best Practices</h3>
+          <div className="space-y-4">
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <h4 className="font-semibold text-white mb-3">Authentication</h4>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Use SSH key authentication instead of passwords</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Prefer <strong>ed25519</strong> keys - shorter but equally secure as 4096-bit RSA</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Enable two-factor authentication (2FA) with Google Authenticator or Duo</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Rotate SSH keys every 1-2 years</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <h4 className="font-semibold text-white mb-3">Access Control</h4>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Disable root login - use sudo instead (<code className="bg-slate-700 px-1 rounded text-emerald-400">PermitRootLogin no</code>)</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Use <code className="bg-slate-700 px-1 rounded text-emerald-400">AllowUsers</code> or <code className="bg-slate-700 px-1 rounded text-emerald-400">AllowGroups</code> to limit SSH access</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Restrict access to specific IP addresses via firewall</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Use <strong>fail2ban</strong> to block brute-force attempts</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <h4 className="font-semibold text-white mb-3">Connection Security</h4>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Change default port 22 to reduce automated attacks</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Set idle timeout to disconnect inactive sessions</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Use strong ciphers: <code className="bg-slate-700 px-1 rounded text-emerald-400">aes256-gcm</code> or <code className="bg-slate-700 px-1 rounded text-emerald-400">chacha20-poly1305</code></span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-400">✓</span>
+                  <span>Keep SSH software updated for security patches</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Pro Tips - Enhanced */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold text-emerald-400 mb-4">Pro Tips</h3>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               {
-                title: "Use Groups",
-                desc: "Organize multiple servers into groups for easier management"
+                title: "Use Groups & Tags",
+                desc: "Organize servers by project, environment (prod/dev), or region for quick access"
               },
               {
-                title: "SFTP Support",
-                desc: "Use the built-in SFTP feature to transfer files to/from your server"
+                title: "Multi-Tab & Split View",
+                desc: "Work in multiple sessions simultaneously with tabs and split-view support"
               },
               {
-                title: "Port Forwarding",
-                desc: "Set up local or remote port forwarding for secure tunneling"
+                title: "Autocomplete",
+                desc: "Enable autocomplete for commands, arguments, and file paths to save time"
               },
               {
-                title: "Snippets",
-                desc: "Save frequently used commands as snippets for quick access"
+                title: "Team Sharing",
+                desc: "Share hosts, keys, identities, and snippets with your team via Vaults"
+              },
+              {
+                title: "Cloud Integration",
+                desc: "Integrate with AWS and DigitalOcean for seamless cloud server management"
+              },
+              {
+                title: "Mosh Support",
+                desc: "Use Mosh for mobile connections - handles intermittent connectivity better than SSH"
               },
             ].map((tip) => (
               <div key={tip.title} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -211,26 +405,30 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Troubleshooting */}
+        {/* Troubleshooting - Enhanced */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold text-emerald-400 mb-4">Troubleshooting</h3>
           <div className="space-y-4">
             {[
               {
                 problem: "Connection Refused",
-                solution: "Ensure SSH is running on the server (systemctl status sshd) and port 22 is open in firewall"
+                solution: "Ensure SSH is running: systemctl status sshd. Check firewall: ufw allow 22 or firewall-cmd --add-service=ssh"
               },
               {
-                problem: "Permission Denied",
-                solution: "Check username/password or verify your SSH key is added to authorized_keys"
+                problem: "Permission Denied (publickey)",
+                solution: "Verify key permissions: chmod 600 ~/.ssh/id_ed25519 and chmod 700 ~/.ssh. Check authorized_keys on server."
               },
               {
                 problem: "Connection Timeout",
-                solution: "Verify the IP address is correct and the server is reachable (try ping)"
+                solution: "Verify IP/hostname is correct. Check if server is reachable with ping. Ensure no network firewall is blocking port 22."
               },
               {
                 problem: "Host Key Verification Failed",
-                solution: "The server's key has changed - verify it's expected, then remove old key from known_hosts"
+                solution: "Server key changed (reinstall or IP reuse). Remove old key: ssh-keygen -R hostname, then reconnect."
+              },
+              {
+                problem: "Too Many Authentication Failures",
+                solution: "SSH agent has too many keys loaded. Specify key explicitly or use ssh-add -D to clear agent."
               },
             ].map((item) => (
               <div key={item.problem} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -246,8 +444,19 @@ export default function Home() {
           <h3 className="text-2xl font-bold text-white mb-4">You&apos;re All Set!</h3>
           <p className="text-slate-300 max-w-xl mx-auto">
             You can now securely connect to your Linux server using Termius.
-            Explore the app&apos;s features like SFTP, port forwarding, and snippets to boost your productivity.
+            Explore advanced features like SFTP, port forwarding, snippets, and jump hosts to boost your productivity.
           </p>
+        </section>
+
+        {/* Sources */}
+        <section className="mt-12 pt-8 border-t border-slate-700">
+          <h4 className="text-lg font-semibold text-slate-400 mb-4">Sources & References</h4>
+          <ul className="space-y-2 text-sm text-slate-500">
+            <li><a href="https://termius.com/documentation" className="hover:text-emerald-400 transition-colors">Termius Official Documentation</a></li>
+            <li><a href="https://www.techrepublic.com/article/how-to-use-termius-ssh/" className="hover:text-emerald-400 transition-colors">TechRepublic - How to use Termius</a></li>
+            <li><a href="https://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html" className="hover:text-emerald-400 transition-colors">nixCraft - OpenSSH Server Best Practices</a></li>
+            <li><a href="https://www.brandonchecketts.com/archives/ssh-ed25519-key-best-practices-for-2025" className="hover:text-emerald-400 transition-colors">SSH Key Best Practices 2025</a></li>
+          </ul>
         </section>
       </main>
 
