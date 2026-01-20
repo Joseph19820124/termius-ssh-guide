@@ -405,6 +405,136 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Mobile SSH Clients - NEW SECTION */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold text-emerald-400 mb-4">Mobile SSH Client Apps</h3>
+          <p className="text-slate-300 mb-6">
+            Besides Termius, there are many excellent SSH client apps for mobile devices. Here&apos;s a comparison of the best options:
+          </p>
+
+          {/* iOS Apps */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <span className="text-2xl">📱</span> iOS (iPhone/iPad)
+            </h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-slate-600">
+                    <th className="text-left py-3 px-2 text-cyan-400">App</th>
+                    <th className="text-left py-3 px-2 text-cyan-400">Features</th>
+                    <th className="text-left py-3 px-2 text-cyan-400">Price</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Termius</td>
+                    <td className="py-3 px-2">Cross-platform sync, SSH/SFTP/Mosh/Telnet, port forwarding, snippets</td>
+                    <td className="py-3 px-2">Free + Subscription</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Blink Shell</td>
+                    <td className="py-3 px-2">Professional terminal, Mosh support, Bluetooth keyboard optimized, Vim/Emacs friendly</td>
+                    <td className="py-3 px-2">$19.99</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Prompt 3</td>
+                    <td className="py-3 px-2">By Panic, Mac/iOS sync, FaceID/YubiKey support, beautiful UI</td>
+                    <td className="py-3 px-2">One-time purchase</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">ShellFish</td>
+                    <td className="py-3 px-2">High-speed SSH, drag &amp; drop files, iOS Files integration</td>
+                    <td className="py-3 px-2">$2.99/mo or $29.99</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">ServerCat</td>
+                    <td className="py-3 px-2">Server monitoring + SSH, Docker management, system resource monitoring</td>
+                    <td className="py-3 px-2">Free + Subscription</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-2 font-semibold text-emerald-400">WebSSH</td>
+                    <td className="py-3 px-2">Simple and practical, SSH/SFTP/port forwarding</td>
+                    <td className="py-3 px-2">$12.99 lifetime</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-4 bg-blue-500/10 border border-blue-500/30 rounded-lg p-3">
+              <p className="text-blue-300 text-sm"><strong>Free options:</strong> a-Shell, iSH Shell</p>
+            </div>
+          </div>
+
+          {/* Android Apps */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <span className="text-2xl">🤖</span> Android
+            </h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-slate-600">
+                    <th className="text-left py-3 px-2 text-cyan-400">App</th>
+                    <th className="text-left py-3 px-2 text-cyan-400">Features</th>
+                    <th className="text-left py-3 px-2 text-cyan-400">Price</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Termius</td>
+                    <td className="py-3 px-2">Cross-platform sync, enterprise-grade, SFTP, ed25519 key support</td>
+                    <td className="py-3 px-2">Free + Subscription</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">JuiceSSH</td>
+                    <td className="py-3 px-2">Beautiful UI, no ads, multi-theme, script support, plugins</td>
+                    <td className="py-3 px-2">Free + Pro upgrade</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">ConnectBot</td>
+                    <td className="py-3 px-2">Open source, lightweight, actively maintained (2025), no ads</td>
+                    <td className="py-3 px-2">Free</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Termux</td>
+                    <td className="py-3 px-2">Full Linux environment, 1500+ packages, pkg manager, power user favorite</td>
+                    <td className="py-3 px-2">Free (open source)</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Royal TSX</td>
+                    <td className="py-3 px-2">Multi-protocol (RDP/VNC/SSH), team sharing, credential management</td>
+                    <td className="py-3 px-2">Subscription</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Recommendations */}
+          <div className="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-xl p-6 border border-emerald-500/20">
+            <h4 className="text-lg font-semibold text-white mb-4">Recommendations by Use Case</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                { useCase: "Cross-platform sync", app: "Termius", note: "iOS/Android/Mac/Windows/Linux" },
+                { useCase: "iOS professional", app: "Blink Shell", note: "Best keyboard support" },
+                { useCase: "Android free & open source", app: "ConnectBot", note: "Actively maintained" },
+                { useCase: "Android power users", app: "Termux", note: "Full Linux environment" },
+                { useCase: "Server monitoring + SSH", app: "ServerCat", note: "iOS only" },
+                { useCase: "Simple occasional use", app: "WebSSH / JuiceSSH", note: "Easy to use" },
+              ].map((item) => (
+                <div key={item.useCase} className="flex items-start gap-3">
+                  <span className="text-emerald-400">→</span>
+                  <div>
+                    <span className="text-white font-medium">{item.useCase}:</span>{" "}
+                    <span className="text-cyan-400">{item.app}</span>
+                    <span className="text-slate-400 text-sm"> ({item.note})</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Troubleshooting - Enhanced */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold text-emerald-400 mb-4">Troubleshooting</h3>
@@ -456,6 +586,9 @@ export default function Home() {
             <li><a href="https://www.techrepublic.com/article/how-to-use-termius-ssh/" className="hover:text-emerald-400 transition-colors">TechRepublic - How to use Termius</a></li>
             <li><a href="https://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html" className="hover:text-emerald-400 transition-colors">nixCraft - OpenSSH Server Best Practices</a></li>
             <li><a href="https://www.brandonchecketts.com/archives/ssh-ed25519-key-best-practices-for-2025" className="hover:text-emerald-400 transition-colors">SSH Key Best Practices 2025</a></li>
+            <li><a href="https://geekflare.com/dev/best-terminals-ssh-apps/" className="hover:text-emerald-400 transition-colors">Geekflare - Best Terminals/SSH Apps for iPad and iPhone</a></li>
+            <li><a href="https://theserverhost.com/blog/post/best-ssh-client-for-android" className="hover:text-emerald-400 transition-colors">TheServerHost - Top 7 Best SSH client for Android</a></li>
+            <li><a href="https://blink.sh/" className="hover:text-emerald-400 transition-colors">Blink Shell Official</a></li>
           </ul>
         </section>
       </main>

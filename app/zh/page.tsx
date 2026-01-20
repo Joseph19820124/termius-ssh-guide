@@ -405,6 +405,136 @@ export default function HomeZh() {
           </div>
         </section>
 
+        {/* Mobile SSH Clients - NEW SECTION */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold text-emerald-400 mb-4">手机 SSH 客户端推荐</h3>
+          <p className="text-slate-300 mb-6">
+            除了 Termius，还有许多优秀的手机 SSH 客户端应用。以下是各平台最佳选择的对比：
+          </p>
+
+          {/* iOS Apps */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <span className="text-2xl">📱</span> iOS (iPhone/iPad)
+            </h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-slate-600">
+                    <th className="text-left py-3 px-2 text-cyan-400">应用</th>
+                    <th className="text-left py-3 px-2 text-cyan-400">特点</th>
+                    <th className="text-left py-3 px-2 text-cyan-400">价格</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Termius</td>
+                    <td className="py-3 px-2">跨平台同步、SSH/SFTP/Mosh/Telnet、端口转发、代码片段</td>
+                    <td className="py-3 px-2">免费 + 订阅</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Blink Shell</td>
+                    <td className="py-3 px-2">专业终端、Mosh 支持、蓝牙键盘优化、Vim/Emacs 友好</td>
+                    <td className="py-3 px-2">$19.99</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Prompt 3</td>
+                    <td className="py-3 px-2">Panic 出品、Mac/iOS 同步、FaceID/YubiKey 支持</td>
+                    <td className="py-3 px-2">一次性购买</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">ShellFish</td>
+                    <td className="py-3 px-2">高速 SSH、拖放文件、iOS 文件集成</td>
+                    <td className="py-3 px-2">$2.99/月 或 $29.99</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">ServerCat</td>
+                    <td className="py-3 px-2">服务器监控 + SSH、Docker 管理、系统资源监控</td>
+                    <td className="py-3 px-2">免费 + 订阅</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-2 font-semibold text-emerald-400">WebSSH</td>
+                    <td className="py-3 px-2">简单实用、SSH/SFTP/端口转发</td>
+                    <td className="py-3 px-2">$12.99 买断</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-4 bg-blue-500/10 border border-blue-500/30 rounded-lg p-3">
+              <p className="text-blue-300 text-sm"><strong>免费选择：</strong>a-Shell、iSH Shell</p>
+            </div>
+          </div>
+
+          {/* Android Apps */}
+          <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 mb-4">
+            <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <span className="text-2xl">🤖</span> Android
+            </h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-slate-600">
+                    <th className="text-left py-3 px-2 text-cyan-400">应用</th>
+                    <th className="text-left py-3 px-2 text-cyan-400">特点</th>
+                    <th className="text-left py-3 px-2 text-cyan-400">价格</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Termius</td>
+                    <td className="py-3 px-2">跨平台同步、企业级功能、SFTP、ed25519 密钥支持</td>
+                    <td className="py-3 px-2">免费 + 订阅</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">JuiceSSH</td>
+                    <td className="py-3 px-2">界面美观、无广告、多主题、脚本支持</td>
+                    <td className="py-3 px-2">免费 + 付费升级</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">ConnectBot</td>
+                    <td className="py-3 px-2">开源免费、轻量级、持续更新（2025）、无广告</td>
+                    <td className="py-3 px-2">免费</td>
+                  </tr>
+                  <tr className="border-b border-slate-700">
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Termux</td>
+                    <td className="py-3 px-2">完整 Linux 环境、1500+ 软件包、pkg 包管理器</td>
+                    <td className="py-3 px-2">免费（开源）</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-2 font-semibold text-emerald-400">Royal TSX</td>
+                    <td className="py-3 px-2">多协议支持 (RDP/VNC/SSH)、团队共享、凭据管理</td>
+                    <td className="py-3 px-2">订阅制</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Recommendations */}
+          <div className="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-xl p-6 border border-emerald-500/20">
+            <h4 className="text-lg font-semibold text-white mb-4">按需求推荐</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                { useCase: "跨平台同步", app: "Termius", note: "iOS/Android/Mac/Windows/Linux" },
+                { useCase: "iOS 专业用户", app: "Blink Shell", note: "最佳键盘支持" },
+                { useCase: "Android 免费开源", app: "ConnectBot", note: "持续维护中" },
+                { useCase: "Android 极客用户", app: "Termux", note: "完整 Linux 环境" },
+                { useCase: "服务器监控 + SSH", app: "ServerCat", note: "仅限 iOS" },
+                { useCase: "简单偶尔使用", app: "WebSSH / JuiceSSH", note: "易于上手" },
+              ].map((item) => (
+                <div key={item.useCase} className="flex items-start gap-3">
+                  <span className="text-emerald-400">→</span>
+                  <div>
+                    <span className="text-white font-medium">{item.useCase}：</span>
+                    <span className="text-cyan-400">{item.app}</span>
+                    <span className="text-slate-400 text-sm">（{item.note}）</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Troubleshooting - Enhanced */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold text-emerald-400 mb-4">常见问题排查</h3>
@@ -456,6 +586,9 @@ export default function HomeZh() {
             <li><a href="https://www.techrepublic.com/article/how-to-use-termius-ssh/" className="hover:text-emerald-400 transition-colors">TechRepublic - 如何使用 Termius</a></li>
             <li><a href="https://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html" className="hover:text-emerald-400 transition-colors">nixCraft - OpenSSH 服务器最佳实践</a></li>
             <li><a href="https://www.brandonchecketts.com/archives/ssh-ed25519-key-best-practices-for-2025" className="hover:text-emerald-400 transition-colors">SSH 密钥最佳实践 2025</a></li>
+            <li><a href="https://geekflare.com/dev/best-terminals-ssh-apps/" className="hover:text-emerald-400 transition-colors">Geekflare - iOS 最佳 SSH 应用</a></li>
+            <li><a href="https://theserverhost.com/blog/post/best-ssh-client-for-android" className="hover:text-emerald-400 transition-colors">TheServerHost - Android 最佳 SSH 客户端</a></li>
+            <li><a href="https://blink.sh/" className="hover:text-emerald-400 transition-colors">Blink Shell 官网</a></li>
           </ul>
         </section>
       </main>
